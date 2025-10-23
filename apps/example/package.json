@@ -13,6 +13,7 @@
   "dependencies": {
     "@ai-sdk-tools/agents": "^0.2.2",
     "@ai-sdk-tools/devtools": "^0.8.4",
+    "@ai-sdk-tools/memory": "^0.1.2",
     "@ai-sdk/openai": "^2.0.53",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-avatar": "^1.1.10",

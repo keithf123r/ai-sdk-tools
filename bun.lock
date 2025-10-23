@@ -14,6 +14,7 @@
       "dependencies": {
         "@ai-sdk-tools/agents": "^0.2.2",
         "@ai-sdk-tools/devtools": "^0.8.4",
+        "@ai-sdk-tools/memory": "^0.1.2",
         "@ai-sdk/openai": "^2.0.53",
         "@radix-ui/react-accordion": "^1.2.12",
         "@radix-ui/react-avatar": "^1.1.10",
@@ -1881,6 +1882,8 @@
     "@ai-sdk-tools/example/@ai-sdk-tools/agents": ["@ai-sdk-tools/agents@0.2.2", "", { "dependencies": { "@ai-sdk-tools/memory": "0.1.1" }, "peerDependencies": { "ai": ">=5.0.0", "zod": "^3.25.76 || ^4.1.8" } }, "sha512-BfyzAk8g3aivABvtuCFbReJ8Ks+e4m8Fwltb1M6ka+5+o8qegNZ0ojnR7sNBkgnCQt4a/wdVV1yg5xJaXTKbJw=="],
 
     "@ai-sdk-tools/example/@ai-sdk-tools/devtools": ["@ai-sdk-tools/devtools@0.8.4", "", { "dependencies": { "@emotion/react": "^11.14.0", "@emotion/styled": "^11.14.1", "@mui/icons-material": "^7.3.4", "@mui/material": "^7.3.4", "@types/dagre": "^0.7.53", "@xyflow/react": "^12.8.6", "ai": "^5.0.68", "dagre": "^0.8.5", "react-json-view-lite": "^2.5.0" }, "peerDependencies": { "@ai-sdk-tools/store": "*", "@ai-sdk/react": ">=0.0.1", "react": ">=16.8.0", "react-dom": ">=16.8.0" }, "optionalPeers": ["@ai-sdk-tools/store"] }, "sha512-Qu+7qMCLmsSlH2H0RwoIhFUxK8USujMpxfUinX+QkCQL6QOn0ai6ZcWwsmiTkG4nYq/D06dV/t8iGhEF1VUSpw=="],
+
+    "@ai-sdk-tools/example/@ai-sdk-tools/memory": ["@ai-sdk-tools/memory@0.1.2", "", { "dependencies": { "zod": "^4.1.12" }, "peerDependencies": { "@upstash/redis": "^1.34.3", "drizzle-orm": "^0.36.0" }, "optionalPeers": ["@upstash/redis", "drizzle-orm"] }, "sha512-bAfIQRnfWFoIyCEbDeBDofmuVFXRxrU12XeTOAv+kgBmXkLrqatcNCRus12SPkdj9uJOK1RZg5MAxx4dBfl18A=="],
 
     "@ai-sdk-tools/example/@biomejs/biome": ["@biomejs/biome@2.2.6", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.2.6", "@biomejs/cli-darwin-x64": "2.2.6", "@biomejs/cli-linux-arm64": "2.2.6", "@biomejs/cli-linux-arm64-musl": "2.2.6", "@biomejs/cli-linux-x64": "2.2.6", "@biomejs/cli-linux-x64-musl": "2.2.6", "@biomejs/cli-win32-arm64": "2.2.6", "@biomejs/cli-win32-x64": "2.2.6" }, "bin": { "biome": "bin/biome" } }, "sha512-yKTCNGhek0rL5OEW1jbLeZX8LHaM8yk7+3JRGv08my+gkpmtb5dDE+54r2ZjZx0ediFEn1pYBOJSmOdDP9xtFw=="],
 
