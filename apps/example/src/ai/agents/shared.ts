@@ -6,11 +6,11 @@
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { Redis } from "@upstash/redis";
+import { openai } from "@ai-sdk/openai";
 import type { AgentConfig } from "@ai-sdk-tools/agents";
 import { Agent } from "@ai-sdk-tools/agents";
-import { UpstashProvider } from "@ai-sdk-tools/memory/upstash";
-import { openai } from "@ai-sdk/openai";
+import { UpstashProvider } from "@ai-sdk-tools/memory";
+import { Redis } from "@upstash/redis";
 
 // Load memory template from markdown file
 const memoryTemplate = readFileSync(
@@ -131,7 +131,8 @@ export const createAgent = (config: AgentConfig<AppContext>) => {
         enabled: true,
         generateTitle: {
           model: openai("gpt-4.1-nano"),
-          instructions: "Generate a short, focused title based on the user's message. Max 50 characters. Focus on the main action or topic. Return ONLY plain text - no markdown, no quotes, no special formatting. Examples: Hiring Analysis, Affordability Check, Burn Rate Forecast, Price Research, Account Balance, Revenue Report"
+          instructions:
+            "Generate a short, focused title based on the user's message. Max 50 characters. Focus on the main action or topic. Return ONLY plain text - no markdown, no quotes, no special formatting. Examples: Hiring Analysis, Affordability Check, Burn Rate Forecast, Price Research, Account Balance, Revenue Report",
         },
         generateSuggestions: {
           enabled: true,
@@ -140,7 +141,6 @@ export const createAgent = (config: AgentConfig<AppContext>) => {
           instructions: suggestionsInstructions,
         },
       },
-
-    }
+    },
   });
 };

@@ -1,9 +1,8 @@
 "use client";
 
-import { useMemo } from "react";
-import type { UIMessage, ToolUIPart } from "ai";
-import type { ChatStatus } from "ai";
+import type { ChatStatus, ToolUIPart, UIMessage } from "ai";
 import { useDataPart } from "ai-sdk-tools/client";
+import { useMemo } from "react";
 import type { AgentStatus } from "@/types/agents";
 
 interface ChatStatusResult {
@@ -14,7 +13,7 @@ interface ChatStatusResult {
 
 /**
  * Hook to derive chat status indicators from messages and streaming state.
- * 
+ *
  * This hook manages the logic for showing agent status and tool messages:
  * - Agent status: shown when routing or executing (before content starts)
  * - Tool message: shown when a tool is actively running
@@ -74,7 +73,11 @@ export function useChatStatus(
         break;
       }
 
-      if (!toolWithMeta.output && !toolWithMeta.result && !toolWithMeta.errorText) {
+      if (
+        !toolWithMeta.output &&
+        !toolWithMeta.result &&
+        !toolWithMeta.errorText
+      ) {
         if (type === "dynamic-tool") {
           currentToolCall = toolWithMeta.toolName;
         } else {
@@ -90,7 +93,8 @@ export function useChatStatus(
     }
 
     // Hide agent status when streaming text or when complete
-    const agentStatus = status === "ready" || hasTextContent ? null : agentStatusData;
+    const agentStatus =
+      status === "ready" || hasTextContent ? null : agentStatusData;
 
     return {
       agentStatus,
@@ -101,4 +105,3 @@ export function useChatStatus(
 
   return result;
 }
-

@@ -102,7 +102,7 @@ Perfect for edge and serverless environments.
 
 ```typescript
 import { Redis } from "@upstash/redis";
-import { UpstashProvider } from "@ai-sdk-tools/memory/upstash";
+import { UpstashProvider } from "@ai-sdk-tools/memory";
 
 const redis = Redis.fromEnv();
 const memory = new UpstashProvider(redis);

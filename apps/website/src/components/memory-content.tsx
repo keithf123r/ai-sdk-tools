@@ -215,7 +215,7 @@ const memory = new DrizzleProvider(db, {
                   className="text-xs font-mono leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html:
-                      highlight(`import { UpstashProvider } from '@ai-sdk-tools/memory/upstash'
+                      highlight(`import { UpstashProvider } from '@ai-sdk-tools/memory'
 import { Redis } from '@upstash/redis'
 
 const memory = new UpstashProvider(

@@ -1,5 +1,4 @@
-import { AIDevtools } from "@ai-sdk-tools/devtools";
-import { Provider as ChatProvider } from "@ai-sdk-tools/store";
+import { AIDevtools, Provider as ChatProvider } from "ai-sdk-tools/client";
 import { redirect } from "next/navigation";
 import { ChatInterface } from "@/components/chat";
 import { loadChatHistory } from "@/lib/data";
