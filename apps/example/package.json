@@ -11,6 +11,12 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@ai-sdk-tools/agents": "^0.2.2",
+    "@ai-sdk-tools/artifacts": "^0.8.2",
+    "@ai-sdk-tools/chrome-extension": "^1.0.2",
+    "@ai-sdk-tools/devtools": "^0.8.4",
+    "@ai-sdk-tools/memory": "^0.1.2",
+    "@ai-sdk-tools/store": "^0.8.2",
     "@ai-sdk/openai": "^2.0.53",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-avatar": "^1.1.10",
@@ -29,7 +35,7 @@
     "@upstash/ratelimit": "^2.0.6",
     "@xyflow/react": "^12.9.0",
     "ai": "^5.0.76",
-    "ai-sdk-tools": "workspace:*",
+    "ai-sdk-tools": "^0.4.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
